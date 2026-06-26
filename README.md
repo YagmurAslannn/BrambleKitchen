@@ -2,8 +2,7 @@
 
 A full-stack recipe application built with Python, SQLite, FastAPI, React, and Bootstrap. </br>
 
-<img width="1913" height="885" alt="Bramble Kitchen" src="https://github.com/user-attachments/assets/5da57fd8-d20b-4982-aa35-2d97cb05181f" /> 
-
+<img width="1912" height="876" alt="Bramble Kitchen2" src="https://github.com/user-attachments/assets/97acdc8f-9bbc-4ca8-9d8d-d1739309a80f" />
 
 ## Live Demo
 
@@ -49,39 +48,52 @@ The project was created to practice web scraping, database management, API devel
 
 ## Project Architecture
 
-HTML Files
-→ BeautifulSoup Parser
-→ SQLite Database
-→ FastAPI API
-→ React Frontend
-→ Cloudflare Deployment
+```
+XML Sitemap
+      ↓
+Browser Automation (Selenium)
+      ↓
+BeautifulSoup Parser
+      ↓
+SQLite Database
+      ↓
+FastAPI REST API
+      ↓
+React Frontend
+      ↓
+Cloudflare Pages
+```
 
 ## Challenges Faced
 
-* Cloudflare protection blocked direct sitemap scraping
+* Cloudflare protection blocked direct HTTP scraping
+* Browser automation was required to bypass Cloudflare protection
 * Recipe images required fallback handling
+* Advertisement blocks needed to be removed from scraped recipe content
 * SQLite duplicate record prevention using UNIQUE constraints
 * API integration between FastAPI and React
 * Deployment configuration and dependency synchronization
 
 ## What I Learned
 
+* XML sitemap parsing
 * HTML parsing with BeautifulSoup
 * Data cleaning and transformation
+* Browser automation with Selenium
 * SQLite database design
 * REST API development with FastAPI
 * React state management and API consumption
 * Frontend deployment using Cloudflare
 
-## Future Improvements (V2)
+## What's New in V2
 
-* Direct sitemap parsing
-* Automated recipe collection
-* Search and filtering functionality
-* Category-based navigation
-* Better ingredient formatting
-* Local image caching
-* Improved responsive design
+* Added recipe search functionality
+* Added category-based browsing
+* Implemented local image caching
+* Improved ingredient formatting
+* Redesigned the frontend layout
+* Added Selenium-based browser automation for Cloudflare-protected pages
+* Refactored the scraping pipeline for future automation
 
 ## Future Improvements (V3)
 
